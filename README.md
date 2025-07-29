@@ -104,5 +104,5 @@ POSTGRES_PASSWORD=loc_pass
 
 Rafik Taieb  
 Développeur Full Stack / Java / DevOps  
-📧 rafik.t.contact@gmail.com  
-🌐 [LinkedIn](https://www.linkedin.com/in/rafik-taieb/) _(à personnaliser si besoin)_
+📧mtaieb.rafik@gmail.com  
+🌐 [LinkedIn](https://www.linkedin.com/in/rafik-taieb/)
