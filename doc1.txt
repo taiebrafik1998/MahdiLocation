@@ -1,0 +1,38 @@
+@Entity : indique à Spring Boot et Hibernate que cette classe sera stockée dans une table en base de données.
+@Id : identifie le champ comme clé primaire
+@GeneratedValue : la valeur est générée automatiquement (autoincrément)
+
+import jakarta.persistence.* : 
+    C’est le package Java officiel qui fournit toutes les annotations pour gérer la persistance (c’est-à-dire l’enregistrement des données en base de données) via JPA (Java Persistence API).
+    Par exemple : @Entity @Id @GeneratedValue @ManyToOne @Column etc
+
+repository est une interface Java qui permet à Spring Data JPA de faire automatiquement :
+Action	Exemple
+📥 Créer	save(locataire)
+📤 Lire	findById(id) / findAll()
+✏️ Mettre à jour	save(locataire modifié)
+❌ Supprimer	deleteById(id)
+pas besoin d’écrire les requêtes SQL ! Spring s’en occupe.
+
+________repository___________
+@Repository est là pour dire à Spring Boot :
+“Ceci est un composant qui sert à accéder aux données (en base de données)”.
+
+import org.springframework.data.jpa.repository.JpaRepository;
+👉 On hérite de JpaRepository qui fournit toutes les méthodes de base (findAll(), save(), deleteById(), etc.)
+
+import org.springframework.stereotype.Repository;
+👉 @Repository indique à Spring que cette interface gère les opérations de base de données.
+
+________________
+@RestControllerb 👉 Indique à Spring que c’est un controller REST
+
+@RequestMapping("/locataires") 👉	Tous les endpoints commenceront par /locataires
+
+@Autowired	👉 Injecte le LocataireRepository automatiquement
+
+@GetMapping 👉	Gère les requêtes GET /locataires
+
+@PostMapping 👉	Gère les requêtes POST /locataires (ajout)
+
+@DeleteMapping("/{id}") 👉	Gère DELETE /locataires/5 (par ID)

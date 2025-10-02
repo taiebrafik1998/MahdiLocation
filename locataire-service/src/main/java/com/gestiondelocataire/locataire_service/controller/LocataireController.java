@@ -37,7 +37,7 @@ public class LocataireController {
     }
     // 4. Mettre à jour un locataire
     @PutMapping("/{id}")
-    public updateLocataire(@PathVariable Long id, @RequestBody Locataire updatedLocataire) {
+    public Locataire updateLocataire(@PathVariable Long id, @RequestBody Locataire updatedLocataire) {
     return locataireRepository.findById(id)
     .map(locataire -> {
             locataire.setNom(updatedLocataire.getNom());
@@ -46,4 +46,5 @@ public class LocataireController {
             locataire.setTelephone(updatedLocataire.getTelephone());
             return locataireRepository.save(locataire);
     }).orElseThrow(() -> new RuntimeException("locataire non trouvé avec ID = " + id));
+}
 }

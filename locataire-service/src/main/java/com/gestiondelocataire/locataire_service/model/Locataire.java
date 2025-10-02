@@ -1,7 +1,7 @@
 package com.gestiondelocataire.locataire_service.model;
 
 import jakarta.persistence.*;
-
+//  entite dans la bd
 @Entity
 public class Locataire {
 
