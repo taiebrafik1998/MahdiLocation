@@ -13,7 +13,8 @@ public class LocataireController {
 
     private final LocataireRepository locataireRepository;
 
-    @Autowired // pour faire simple elle dit inject automatiquement une dependance ici
+    @Autowired // pour faire simple elle dit inject automatiquement une dependance ici 
+                // LocataireRepository sera injecter automatiquement
     public LocataireController(LocataireRepository locataireRepository) {
         this.locataireRepository = locataireRepository;
     }

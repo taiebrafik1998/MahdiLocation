@@ -3,7 +3,9 @@
 @GeneratedValue : la valeur est générée automatiquement (autoincrément)
 
 import jakarta.persistence.* : 
-    C’est le package Java officiel qui fournit toutes les annotations pour gérer la persistance (c’est-à-dire l’enregistrement des données en base de données) via JPA (Java Persistence API).
+    C’est le package Java officiel qui fournit toutes les annotations
+    pour gérer la persistance (c’est-à-dire l’enregistrement des données en base de données)
+    via JPA (Java Persistence API).
     Par exemple : @Entity @Id @GeneratedValue @ManyToOne @Column etc
 
 repository est une interface Java qui permet à Spring Data JPA de faire automatiquement :
