@@ -1,5 +1,5 @@
 package com.gestiondelocataire.locataire_service.model;
-
+import jakarta.validation.constraints.NotBlank;// pour la validation des données
 import jakarta.persistence.*;
 //  entite dans la bd
 @Entity

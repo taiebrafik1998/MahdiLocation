@@ -38,3 +38,9 @@ ________________
 @PostMapping 👉	Gère les requêtes POST /locataires (ajout)
 
 @DeleteMapping("/{id}") 👉	Gère DELETE /locataires/5 (par ID)
+ annotation de jakarta bean validation  annotation validation @notBlank et @Valid
+<dependency>
+    <groupId>jakarta.validation</groupId>
+    <artifactId>jakarta.validation-api</artifactId>
+    <version>3.0.2</version>
+</dependency>

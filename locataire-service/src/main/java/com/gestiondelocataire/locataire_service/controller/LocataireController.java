@@ -4,7 +4,7 @@ import com.gestiondelocataire.locataire_service.model.Locataire;
 import com.gestiondelocataire.locataire_service.repository.LocataireRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+import jakarta.validation.Valid; // pour la validation des données
 import java.util.List;
 
 @RestController
