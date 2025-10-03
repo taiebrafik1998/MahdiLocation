@@ -109,7 +109,8 @@ POSTGRES_PASSWORD=loc_pass
 
 ## 🖼️ Aperçu Swagger
 
-<img src="locataire-service/img/swagger_crud_locataire.png" alt="Swagger CRUD Locataire" width="800">
+<img src="locataire-service/swagger_crud_locataire.png" alt="Swagger CRUD Locataire" width="800">
+
 
 ---
 
