@@ -27,7 +27,7 @@ public class LocataireController {
 
     // 2. Ajouter un nouveau locataire
     @PostMapping
-    public Locataire createLocataire(@RequestBody Locataire locataire) {
+    public Locataire createLocataire(@Valid @RequestBody Locataire locataire) {
         return locataireRepository.save(locataire);
     }
 
@@ -38,7 +38,7 @@ public class LocataireController {
     }
     // 4. Mettre à jour un locataire
     @PutMapping("/{id}")
-    public Locataire updateLocataire(@PathVariable Long id, @RequestBody Locataire updatedLocataire) {
+    public Locataire updateLocataire(@PathVariable Long id,@Valid @RequestBody Locataire updatedLocataire) {
     return locataireRepository.findById(id)
     .map(locataire -> {
             locataire.setNom(updatedLocataire.getNom());

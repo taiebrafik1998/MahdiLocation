@@ -8,6 +8,6 @@ public class PingController {
 
     @GetMapping("/ping")
     public String ping() {
-        return "pong";
+        return "le service est en marche";
     }
 }
