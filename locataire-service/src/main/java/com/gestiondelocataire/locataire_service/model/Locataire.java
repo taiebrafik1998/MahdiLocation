@@ -1,5 +1,5 @@
 package com.gestiondelocataire.locataire_service.model;
-import jakarta.validation.constraints.NotBlank;// pour la validation des données
+import jakarta.validation.constraints.*;// pour la validation des données
 import jakarta.persistence.*;
 //  entite dans la bd
 @Entity
@@ -15,7 +15,7 @@ public class Locataire {
     @NotBlank(message = "Le prénom est obligatoire")
     private String prenom;
 
-    @NotBlank(message = "L'email est obligatoire")
+    @Email(message = "L'email doit être valide")
     private String email;
     @NotBlank(message = "Le téléphone est obligatoire")
     private String telephone;
