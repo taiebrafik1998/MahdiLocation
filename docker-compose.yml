@@ -21,12 +21,9 @@ services:
       - locataire-db
     ports:
       - "${SPRING_PORT}:8081"
-    environment:
-      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
-      DB_HOST: locataire-db
-      POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    env_file:
+      - locataire-service/.env
+
 
 volumes:
   locataire_pgdata:
