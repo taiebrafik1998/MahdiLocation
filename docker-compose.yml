@@ -1,4 +1,5 @@
 services:
+
   locataire-db:
     image: postgres:14
     container_name: locataire-db
@@ -10,6 +11,20 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - locataire_pgdata:/var/lib/postgresql/data
+
+  locataire-service:
+    build: .
+    container_name: locataire-service
+    depends_on:
+      - locataire-db
+    ports:
+      - "${SPRING_PORT}:8081"
+    environment:
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
+      DB_HOST: locataire-db
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
 
 volumes:
   locataire_pgdata:
