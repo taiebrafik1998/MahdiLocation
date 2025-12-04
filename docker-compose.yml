@@ -13,7 +13,9 @@ services:
       - locataire_pgdata:/var/lib/postgresql/data
 
   locataire-service:
-    build: .
+    build:
+      context: ./locataire-service
+      dockerfile: Dockerfile
     container_name: locataire-service
     depends_on:
       - locataire-db
