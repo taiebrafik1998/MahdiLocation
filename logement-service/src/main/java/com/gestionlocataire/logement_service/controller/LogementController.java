@@ -1,5 +1,6 @@
 package com.gestiondelocataire.logement_service.controller;
 
+
 import com.gestiondelocataire.logement_service.model.Logement;
 import com.gestiondelocataire.logement_service.repository.LogementRepository;
 

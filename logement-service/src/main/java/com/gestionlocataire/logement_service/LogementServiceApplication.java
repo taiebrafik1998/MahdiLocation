@@ -1,4 +1,4 @@
-package com.gestionlocataire.logement_service;
+package com.gestiondelocataire.logement_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class LogementServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LogementServiceApplication.class, args);
+		SpringApplication.run(LogementServiceApplication.class, args); 
 	}
 
 }
