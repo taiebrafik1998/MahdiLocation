@@ -55,6 +55,18 @@ services:
     env_file:
       - logement-service/.env
 
+  # ========================= Rabbitmq SERVICE ===========================
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
+    ports:
+      - "${RABBITMQ_PORT}:5672"
+      - "15672:15672"
+    networks:
+      - gestion-net
 
 # ========================= VOLUMES =========================
 volumes:
